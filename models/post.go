@@ -5,4 +5,5 @@ type Post struct {
 	UserId uint   `json:"user_id,omitempty"`
 	Title  string `json:"title,omitempty"`
 	Body   string `json:"body,omitempty"`
+	User   User   `gorm:"foreignkey:UserId" json:"user"`
 }
